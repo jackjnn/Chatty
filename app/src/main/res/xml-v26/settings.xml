@@ -12,14 +12,13 @@
         />
 
     <SwitchPreferenceCompat
-        app:iconSpaceReserved="false"
+        app:iconSpaceReserved="true"
         android:title="@string/title_auto_reply"
         android:key="@string/key_auto_reply"
         android:defaultValue="false"
         android:summary="@string/summary_auto_reply" />
 
     <ListPreference
-        android:dependency="@string/key_auto_reply"
         android:dialogTitle="@string/title_dialog_reply_time"
         android:key="@string/key_auto_reply_time"
         android:title="@string/title_auto_reply_time"
@@ -28,15 +27,5 @@
         android:entries="@array/entries_auto_reply_time"
         android:entryValues="@array/values_auto_reply_time"
         />
-
-    <ListPreference
-        android:dependency="@string/key_auto_reply"
-        android:dialogTitle="@string/title_dialog_auto_reply_msg"
-        android:entries="@array/pref_auto_reply_messages"
-        android:entryValues="@array/pref_auto_reply_messages"
-        android:key="@string/key_auto_reply_msg"
-        android:title="@string/title_auto_reply_msg"
-        app:iconSpaceReserved="false"
-        app:useSimpleSummaryProvider="true" />
 
 </PreferenceScreen>
